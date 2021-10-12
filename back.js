@@ -7,7 +7,7 @@ function submit() {
         let country = document.getElementById("country")
         let gender = document.getElementById("gender")
 
-        if (firstname.value != "" && surname.value != "" && email.value != "" && phonenumber.value != "" && age.value != "" ){
+        if (firstname.value != "" && surname.value != "" && email.value != "" && phonenumber.value != "" && age.value != ""){
             console.log(firstname.value);
             console.log(surname.value);
             console.log(email.value);
@@ -17,12 +17,16 @@ function submit() {
             console.log(Cvalue);
             let Gvalue = gender.options[gender.selectedIndex].text;
             console.log(Gvalue);
-            alert("You've completed the form correctly!")
-            firstname.value = ""
-            surname.value = ""
-            email.value = ""
-            phonenumber.value = ""
-            age.value = ""
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)){
+                alert("You've completed the form correctly!")
+                firstname.value = ""
+                surname.value = ""
+                email.value = ""
+                phonenumber.value = ""
+                age.value = ""
+            }else{
+                alert("You need to enter a valid email")
+            }
         }else{
             alert("You need to write at least one thing in each of the boxes to complete the form!")
         }
