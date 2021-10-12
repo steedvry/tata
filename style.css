@@ -9,10 +9,21 @@ body {
     border-radius: 10px;
 }
 .form-container{
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 input{
     margin-left: 10px;
     margin-top: 10px;
+    display: block;
+}
+select{
+    margin-left: 10px;
+    margin-top: 10px;
+    display: block;
+}
+strong{
+    margin-left: 10px;
+    margin-top: 10px;
+    display: block;
 }
